@@ -14,7 +14,7 @@
 'use strict';
 
 const express = require('express');
-const VERSION = 0.1
+const VERSION = 0.2
 
 const app = express();
 
@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
 if (module === require.main) {
   // [START server]
   // Start the server
-  const server = app.listen(process.env.PORT || 8080, () => {
+  const server = app.listen(process.env.PORT || 8081, () => {
     const port = server.address().port;
     console.log(`App listening on port ${port}`);
   });
