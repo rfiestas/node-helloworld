@@ -14,7 +14,7 @@
 'use strict';
 
 const express = require('express');
-const VERSION = 0.0
+const VERSION = 0.1
 
 const app = express();
 
