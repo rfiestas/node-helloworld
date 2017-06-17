@@ -14,13 +14,14 @@
 'use strict';
 
 const express = require('express');
+const VERSION = 0.0
 
 const app = express();
 
 // [START hello_world]
 // Say hello!
 app.get('/', (req, res) => {
-  res.status(200).send('Hello, world! V${VERSION}');
+  res.status(200).send('Hello, world! (V'+VERSION+')');
 });
 // [END hello_world]
 
