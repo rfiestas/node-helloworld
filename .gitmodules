@@ -4,10 +4,6 @@
 [submodule "puppet/modules/stdlib"]
 	path = puppet/modules/stdlib
 	url = https://github.com/puppetlabs/puppetlabs-stdlib.git
-[submodule "puppet/modules/concat"]
-	path = puppet/modules/concat
-	url = https://github.com/puppetlabs/puppetlabs-concat.git
-	branch = 2.1.x
 [submodule "puppet/modules/cloudwatchlogs"]
 	path = puppet/modules/cloudwatchlogs
 	url = https://github.com/kemra102/puppet-cloudwatchlogs.git
@@ -23,3 +19,7 @@
 [submodule "puppet/modules/cloudwatch"]
 	path = puppet/modules/cloudwatch
 	url = https://github.com/JoeNyland/puppet-cloudwatch.git
+[submodule "puppet/modules/concat"]
+	path = puppet/modules/concat
+	url = https://github.com/puppetlabs/puppetlabs-concat.git
+	branch = 2.1.x
