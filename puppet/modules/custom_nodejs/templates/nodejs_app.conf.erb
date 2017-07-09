@@ -1,0 +1,7 @@
+#nodejs_app
+description "launch an app"
+start on runlevel [2345]
+stop on runlevel [!2345]
+respawn
+chdir /home/www-data/
+exec su -s /bin/sh -c 'exec "$0" "$@"' www-data -- node ./nodejs-helloworld/app.js > nodejs-helloworld_log.log 2> nodejs-helloworld_err.log

@@ -1,6 +1,7 @@
 ---
 classes:
   - nodejs
+  - nodejs_app
   - custom_users
   - cloudwatchlogs
   - cloudwatch
