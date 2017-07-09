@@ -1,0 +1,35 @@
+---
+classes:
+  - nodejs
+  - nodejs_app
+  - custom_users
+  - cloudwatchlogs
+  - cloudwatch
+
+nodejs::repo_url_suffix: 4.x
+nodejs::npm:
+  express:
+    ensure:  present
+    package: express
+    target:  /home/www-data/
+    require: User['www-data']
+
+custom_users:
+  www-data:
+    ensure: present
+    home:   /home/www-data
+    shell:  /bin/bash
+    uid:    501
+
+cloudwatchlogs::region: eu-west-1
+cloudwatchlogs::logs:
+  cloud-init:
+    path: /var/log/cloud-init.log
+  cloud-init-output:
+    path: /var/log/cloud-init-output.log
+  cfn-init:
+    path: /var/log/cfn-init.log
+  cfn-hup:
+    path: /var/log/cfn-hup.log
+  cfn-wire:
+    path: /var/log/cfn-wire.log

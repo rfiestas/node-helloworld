@@ -1,0 +1,8 @@
+---
+:backends:
+  - yaml
+:hiterachy:
+  - common
+
+:yaml:
+  :datadir: /home/www-data/nodejs-helloworld/puppet/hieradata/
