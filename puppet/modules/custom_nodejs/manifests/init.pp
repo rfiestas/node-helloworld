@@ -10,7 +10,8 @@ class custom_nodejs {
   
   exec { 'start_nodejs_app':
     command => 'start nodejs_app',
-    path    => '/sbin/:/bin/',
+    path    => '/sbin/:/bin/'
+	require => [ File['nodejs_app.conf'] ]
   }
   
   $npm_packages = hiera('nodejs::npm')
