@@ -11,7 +11,6 @@ class custom_nodejs {
   exec { 'start_nodejs_app':
     command => 'start nodejs_app',
     path    => '/sbin/:/bin/',
-	unless  => 'status nodejs_app | grep start'
   }
   
   $npm_packages = hiera('nodejs::npm')
